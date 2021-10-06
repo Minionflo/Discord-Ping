@@ -8,9 +8,15 @@ var config_statustype = process.env.STATUSTYPE
 var config_channel = process.env.CHANNEL
 
 client.on('ready', () => {
-    client.user.setActivity(config_status, {type: config_statustype})
+    activity()
+    setInterval(activity, 60000)
     console.log(`Online`)
 })
+
+function activity() {
+    client.user.setActivity(config_status, {type: config_statustype})
+}
+
 
 
 var cmdmap = {
