@@ -44,7 +44,7 @@ client.on('message', (msg) => {
 
             
             // 
-            var invoke = cont.split(' ')[0].substr(config.prefix_length),
+            var invoke = cont.split(' ')[0].substr(config_prefix.length),
                 args   = cont.split(' ').slice(1)
             
             
